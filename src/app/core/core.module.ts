@@ -5,6 +5,7 @@ import { LocalStorageService } from './services/storage/local-storage/local-stor
 import { CookieStorageService } from './services/storage/cookie-storage/cookie-storage.service';
 import { SessionStorageService } from './services/storage/session-storage/session-storage.service';
 import { HttpClientModule } from "@angular/common/http";
+import { ThemeService } from './services/theme/theme.service';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
     LocalStorageService,
     CookieStorageService,
     SessionStorageService,
+    ThemeService,
   ],
   imports: [
     CommonModule,

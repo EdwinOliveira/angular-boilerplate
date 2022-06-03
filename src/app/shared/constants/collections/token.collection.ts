@@ -1,1 +1,3 @@
-export enum TokenCollection { }
+export enum TokenCollection {
+    THEME = "theme"
+}

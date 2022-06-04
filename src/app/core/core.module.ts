@@ -6,7 +6,8 @@ import { CookieStorageService } from './services/storage/cookie-storage/cookie-s
 import { SessionStorageService } from './services/storage/session-storage/session-storage.service';
 import { HttpClientModule } from "@angular/common/http";
 import { ThemeService } from './services/theme/theme.service';
-import { AbstractStorageService } from '../shared/abstracts/storage.service.abstract';
+import { IconService } from './services/icon/icon.service';
+import { LocalizationService } from './services/localization/localization.service';
 
 
 @NgModule({
@@ -17,6 +18,8 @@ import { AbstractStorageService } from '../shared/abstracts/storage.service.abst
     CookieStorageService,
     SessionStorageService,
     ThemeService,
+    IconService,
+    LocalizationService,
   ],
   imports: [
     CommonModule,

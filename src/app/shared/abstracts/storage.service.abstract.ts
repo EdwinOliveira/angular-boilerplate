@@ -1,7 +1,7 @@
 import { TokenCollection } from "../constants/collections/token.collection";
 import { IStorageService } from "../interfaces/storage.service.interface";
 
-export abstract class StorageService implements IStorageService {
+export abstract class AbstractStorageService implements IStorageService {
 
     abstract fetchToken<T>(name: TokenCollection): T | null;
 

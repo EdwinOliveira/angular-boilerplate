@@ -1,16 +1,11 @@
 import { Injectable } from '@angular/core';
-import { StorageService } from 'src/app/shared/abstracts/storage.service.abstract';
+import { AbstractStorageService } from 'src/app/shared/abstracts/storage.service.abstract';
 import { TokenCollection } from 'src/app/shared/constants/collections/token.collection';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LocalStorageService extends StorageService {
-
-  constructor() {
-    super();
-  }
-
+export class LocalStorageService extends AbstractStorageService {
   public override fetchToken<T>(name: TokenCollection): T | null {
     const token = localStorage.getItem(String(name));
 

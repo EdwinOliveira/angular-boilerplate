@@ -1,1 +1,3 @@
-<p>layout works!</p>
+<div class="container" *ngIf="this.themeService.state$ | async as theme" [ngClass]="theme">
+    <div class="inner-container"></div>
+</div>

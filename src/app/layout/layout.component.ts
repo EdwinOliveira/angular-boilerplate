@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../core/services/theme/theme.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly _themeService: ThemeService,
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  public get themeService(): ThemeService {
+    return this._themeService;
   }
 
 }

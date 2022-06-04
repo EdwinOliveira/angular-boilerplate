@@ -7,8 +7,6 @@ import { SignOutComponent } from './components/sign-out/sign-out.component';
 import { RefreshTokenComponent } from './components/refresh-token/refresh-token.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
-
-
 @NgModule({
   declarations: [
     SignInComponent,
@@ -20,6 +18,6 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
-  ]
+  ],
 })
 export class AuthenticationModule { }

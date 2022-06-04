@@ -6,6 +6,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SignOutComponent } from './components/sign-out/sign-out.component';
 import { RefreshTokenComponent } from './components/refresh-token/refresh-token.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { AbstractAuthenticationService } from './authentication-service.abstract';
+import { AuthenticationService } from './services/authentication/authentication.service';
 
 @NgModule({
   declarations: [
@@ -19,5 +21,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     CommonModule,
     AuthenticationRoutingModule,
   ],
+  providers: [
+    { provide: AbstractAuthenticationService, useClass: AuthenticationService }
+  ]
 })
 export class AuthenticationModule { }

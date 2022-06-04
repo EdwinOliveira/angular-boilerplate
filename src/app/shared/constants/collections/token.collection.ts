@@ -1,3 +1,4 @@
 export enum TokenCollection {
-    THEME = "theme"
+    THEME = "theme",
+    LANG = "lang"
 }

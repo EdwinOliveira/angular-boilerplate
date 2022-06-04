@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ThemeService } from './services/theme/theme.service';
 import { IconService } from './services/icon/icon.service';
 import { LocalizationService } from './services/localization/localization.service';
+import { LocaleService } from './services/locale/locale.service';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LocalizationService } from './services/localization/localization.servic
     ThemeService,
     IconService,
     LocalizationService,
+    LocaleService,
   ],
   imports: [
     CommonModule,

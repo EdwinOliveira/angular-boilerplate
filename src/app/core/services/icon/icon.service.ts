@@ -17,7 +17,7 @@ export class IconService {
     );
   }
 
-  private _fetchIconByName(name: IconCollection): IconDefinition | null {
+  private _fetchIconDefinitionByName(name: IconCollection): IconDefinition | null {
     const icon = this._icons.find((icon) => icon.name.match(name));
 
     return icon !== undefined ? icon.definition : null;
@@ -26,10 +26,10 @@ export class IconService {
   /** Icons */
 
   public get themeIcon(): IconDefinition {
-    return this._fetchIconByName(IconCollection.THEME) ?? faPaintRoller;
+    return this._fetchIconDefinitionByName(IconCollection.THEME) ?? faPaintRoller;
   }
 
   public get languageIcon(): IconDefinition {
-    return this._fetchIconByName(IconCollection.LANGUAGE) ?? faGlobe;
+    return this._fetchIconDefinitionByName(IconCollection.LANGUAGE) ?? faGlobe;
   }
 }

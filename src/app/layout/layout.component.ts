@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalizationService } from '../core/services/localization/localization.service';
 import { ThemeService } from '../core/services/theme/theme.service';
 import { ContentService } from './components/content/content.service';
 import { FooterService } from './components/footer/footer.service';
@@ -16,7 +17,10 @@ export class LayoutComponent implements OnInit {
     private readonly _navbarService: NavbarService,
     private readonly _contentService: ContentService,
     private readonly _footerService: FooterService,
-  ) { }
+    private readonly _localizationService: LocalizationService,
+  ) {
+    this._localizationService.initializeLanguage();
+  }
 
   ngOnInit(): void { }
 

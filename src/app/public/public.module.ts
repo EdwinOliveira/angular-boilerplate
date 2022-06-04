@@ -4,8 +4,7 @@ import { PublicRoutingModule } from './public-routing.module';
 import { UserModule } from './user/user.module';
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     UserModule,

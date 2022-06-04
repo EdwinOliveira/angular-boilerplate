@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AbstractStorageService } from 'src/app/shared/abstracts/storage.service.abstract';
 import { ThemeCollection } from 'src/app/shared/constants/collections/theme.collection';
@@ -7,7 +7,7 @@ import { TokenCollection } from 'src/app/shared/constants/collections/token.coll
 @Injectable({
   providedIn: 'root'
 })
-export class ThemeService {
+export class ThemeService implements OnDestroy {
 
   private readonly _state: BehaviorSubject<ThemeCollection>;
   private readonly _state$: Observable<ThemeCollection>;
@@ -17,6 +17,11 @@ export class ThemeService {
   ) {
     this._state = new BehaviorSubject<ThemeCollection>(this._defineBaseTheme());
     this._state$ = this._state.asObservable();
+  }
+
+  ngOnDestroy(): void {
+    this._state.unsubscribe();
+    this._state.complete();
   }
 
   private _defineBaseTheme(): ThemeCollection {

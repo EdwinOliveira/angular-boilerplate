@@ -1,3 +1,15 @@
 <div class="container" *ngIf="this.themeService.state$ | async as theme" [ngClass]="theme">
-    <div class="inner-container"></div>
+    <div class="inner-container">
+        <div class="row">
+            <div class="row" *ngIf="this.navbarService.state$ | async">
+                <app-navbar></app-navbar>
+            </div>
+            <div class="row" *ngIf="this.contentService.state$ | async">
+                <app-content></app-content>
+            </div>
+        </div>
+        <div class="row" *ngIf="this.footerService.state$ | async">
+            <app-footer></app-footer>
+        </div>
+    </div>
 </div>

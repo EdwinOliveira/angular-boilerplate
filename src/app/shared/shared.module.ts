@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 import { CoreModule } from '../core/core.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -10,12 +11,14 @@ import { CoreModule } from '../core/core.module';
     CommonModule,
     FontAwesomeModule,
     TranslateModule,
-    CoreModule
+    CoreModule,
+    ReactiveFormsModule
   ],
   exports: [
     FontAwesomeModule,
     TranslateModule,
-    CoreModule
+    CoreModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

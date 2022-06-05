@@ -54,13 +54,13 @@ export class LayoutComponent implements OnInit {
             return of({ navbarState: true, contentState: true, footerState: true });
           }
 
-          const { navbarState, contentState, footerState } = route['data'] as unknown as RouterStateModel;
-
-          return of({ navbarState: navbarState, contentState: contentState, footerState: footerState });
+          return route['data'];
         }),
       )
       .subscribe((data: Data | RouterStateModel) => {
         const { navbarState, contentState, footerState } = data;
+
+        console.log(navbarState)
 
         this._navbarService.updateState(navbarState);
         this._contentService.updateState(contentState);

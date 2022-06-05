@@ -8,6 +8,7 @@ import { RefreshTokenComponent } from './components/refresh-token/refresh-token.
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AbstractAuthenticationService } from './authentication-service.abstract';
 import { AuthenticationService } from './services/authentication/authentication.service';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AuthenticationService } from './services/authentication/authentication.
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
+    SharedModule,
   ],
   providers: [
     { provide: AbstractAuthenticationService, useClass: AuthenticationService }

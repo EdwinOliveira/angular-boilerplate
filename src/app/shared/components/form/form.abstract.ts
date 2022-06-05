@@ -1,4 +1,4 @@
-import { FormControl, FormGroup, ValidatorFn } from "@angular/forms";
+import { FormControl, FormGroup, ValidatorFn, Validators } from "@angular/forms";
 import { FormControlModel } from "./models/form-control.model";
 
 export abstract class AbstractForm {
@@ -17,7 +17,7 @@ export abstract class AbstractForm {
             const validators: Array<ValidatorFn> = new Array<ValidatorFn>();
 
             for (const rule of formControl.rules) {
-                validators.push(rule as keyof ValidatorFn)
+                validators.push(Validators[rule as keyof ValidatorFn])
             }
 
             this._formGroup.addControl(formControl.name, new FormControl(null, validators))
@@ -41,4 +41,6 @@ export abstract class AbstractForm {
 
         return true;
     }
+
+    public abstract save(): void;
 }

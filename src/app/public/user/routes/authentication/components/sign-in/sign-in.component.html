@@ -1,1 +1,18 @@
-<p>sign-in works!</p>
+<div class="container">
+    <div class="inner-container">
+        <form (ngSubmit)="save()" [formGroup]="this.formGroup">
+            <div class="form-control">
+                <label for="email"> {{ "" | translate }} </label>
+                <input type="email" formControlName="email">
+            </div>
+            <div class="form-control">
+                <label for="password"> {{ "" | translate }} </label>
+                <input type="password" formControlName="password">
+            </div>
+            <div class="form-divider"></div>
+            <div class="form-action">
+                <button type="submit"> {{ "" | translate }}</button>
+            </div>
+        </form>
+    </div>
+</div>

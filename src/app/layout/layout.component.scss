@@ -11,6 +11,17 @@
         .row {
             display: flex;
             flex-direction: column;
+            min-height: inherit;
         }
     }
+}
+
+.dark-theme {
+    background-color: var(--dark-theme-background-color);
+    color: var(dark-theme-text-color);
+}
+
+.light-theme {
+    background-color: var(--light-theme-background-color);
+    color: var(light-theme-text-color);
 }

@@ -28,7 +28,7 @@ export abstract class AbstractForm {
         return this._formGroup;
     }
 
-    public get isFormErrors(): boolean {
+    public isValid(): boolean {
         const controls = this._formGroup.controls;
 
         for (const formControl of this._formControls) {

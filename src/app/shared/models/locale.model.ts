@@ -1,12 +1,10 @@
-import { LocaleCollection } from "../constants/collections/locale.collection";
-
 export class LocaleModel {
     public constructor(
-        private readonly _name: LocaleCollection,
+        private readonly _name: string,
         private readonly _path: string
     ) { }
 
-    public get name(): LocaleCollection {
+    public get name(): string {
         return this._name;
     }
 

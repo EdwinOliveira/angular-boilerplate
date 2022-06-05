@@ -1,5 +1,22 @@
 {
     "COMMON": {
         "BRAND": "D|O"
+    },
+    "CONTENT": {
+        "PUBLIC": {
+            "USER": {
+                "AUTHENTICATION": {
+                    "SIGN_IN": {
+                        "EMAIL": {
+                            "LABEL": "Email"
+                        },
+                        "PASSWORD": {
+                            "LABEL": "Password"
+                        }
+                    }
+                }
+            }
+        },
+        "SHARED": {}
     }
 }

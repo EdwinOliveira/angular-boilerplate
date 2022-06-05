@@ -10,23 +10,48 @@ import { AuthenticationRouteCollection } from './constants/authentication.route.
 const routes: Routes = [
     {
         path: AuthenticationRouteCollection.SIGN_IN,
-        component: SignInComponent
+        component: SignInComponent,
+        data: {
+            navbarState: true,
+            contentState: true,
+            footerState: false,
+        },
     },
     {
         path: AuthenticationRouteCollection.SIGN_UP,
-        component: SignUpComponent
+        component: SignUpComponent,
+        data: {
+            navbarState: true,
+            contentState: true,
+            footerState: false,
+        },
     },
     {
         path: AuthenticationRouteCollection.SIGN_OUT,
-        component: SignOutComponent
+        component: SignOutComponent,
+        data: {
+            navbarState: true,
+            contentState: true,
+            footerState: false,
+        },
     },
     {
         path: AuthenticationRouteCollection.FORGOT_PASSWORD,
-        component: ForgotPasswordComponent
+        component: ForgotPasswordComponent,
+        data: {
+            navbarState: true,
+            contentState: true,
+            footerState: false,
+        },
     },
     {
         path: AuthenticationRouteCollection.REFRESH_TOKEN,
-        component: RefreshTokenComponent
+        component: RefreshTokenComponent,
+        data: {
+            navbarState: true,
+            contentState: true,
+            footerState: false,
+        },
     },
     {
         path: "",

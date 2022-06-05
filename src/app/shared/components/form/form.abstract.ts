@@ -28,12 +28,12 @@ export abstract class AbstractForm {
         return this._formGroup;
     }
 
-    public get isFormValid(): boolean {
+    public get isFormErrors(): boolean {
         const controls = this._formGroup.controls;
 
         for (const formControl of this._formControls) {
             if (controls[formControl.name].touched === true && controls[formControl.name].dirty === true) {
-                if (controls[formControl.name].errors === null) {
+                if (controls[formControl.name].errors !== null) {
                     return false;
                 }
             }
